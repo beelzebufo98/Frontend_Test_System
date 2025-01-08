@@ -1,69 +1,101 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  display: flex;
-  color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87);
-  background-color: #242424; */
-  font-synthesis: none;
-  flex: 1;
-  flex-direction: column;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+/* Основной контейнер */
+.main-container {
+  background: linear-gradient(to bottom, #e3f2fd, #f1f8ff);
   min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Заголовок */
+.page-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #37474f;
+  margin-bottom: 40px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Карточки */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.custom-card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Индивидуальные градиенты */
+.card-0 {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.card-1 {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.card-2 {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+/* Содержимое карточек */
+.card-content {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+/* Ссылка */
+.card-link {
+  text-decoration: none;
+}
+
+/* Декоративные элементы */
+.custom-card::before,
+.custom-card::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+.custom-card::before {
+  width: 100px;
+  height: 100px;
+  top: -20px;
+  left: -20px;
+}
+
+.custom-card::after {
+  width: 200px;
+  height: 200px;
+  bottom: -40px;
+  right: -40px;
 }
