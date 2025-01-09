@@ -396,7 +396,6 @@ const SectionTestsPage = () => {
             </Button>
           </Flex>
         </Flex>
-
         <Flex direction="column" className="w-64">
           <QuestionNavigation
             currentQuestion={currentQuestionIndex}
@@ -406,7 +405,15 @@ const SectionTestsPage = () => {
           />
         </Flex>
       </Flex>
-    </Flex>
+     <div className="w-full mt-8">
+     <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent opacity-50 mb-8" />
+     <div className="text-center pb-8">
+       <Text variant="body-1" color="secondary">
+         Благодарность за запуск сайта попрошу выразить Орешкиной Наташе и Ангрикову Тенгису 
+       </Text>
+     </div>
+   </div>
+ </Flex>
   );
 };
 
