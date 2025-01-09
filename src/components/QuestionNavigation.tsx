@@ -153,5 +153,41 @@ type QuestionAttempt = {
       </Card>
     );
   };
+  const QuestionButton = ({ number, state }: { number: number, state: 'correct' | 'incorrect' | 'unanswered' }) => {
+    const getButtonStyle = () => {
+      switch (state) {
+        case 'correct':
+          return {
+            backgroundColor: 'rgba(34, 197, 94, 0.1)',
+            borderColor: '#22c55e',
+            color: '#22c55e'
+          };
+        case 'incorrect':
+          return {
+            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+            borderColor: '#ef4444',
+            color: '#ef4444'
+          };
+        default:
+          return {
+            backgroundColor: 'transparent',
+            borderColor: '#6b7280',
+            color: '#6b7280'
+          };
+      }
+    };
+  
+    return (
+      <button
+        className="px-3 py-2 rounded border"
+        style={getButtonStyle()}
+      >
+        Question {number}
+        {state === 'correct' && <Check size={16} className="ml-1" />}
+        {state === 'incorrect' && <X size={16} className="ml-1" />}
+        {state === 'unanswered' && <HelpCircle size={16} className="ml-1" />}
+      </button>
+    );
+  };
   
   export default QuestionNavigation;

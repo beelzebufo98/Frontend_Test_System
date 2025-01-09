@@ -325,9 +325,10 @@ const SectionTestsPage = () => {
   return (
     <Flex direction="column" gap={4} className="w-full max-w-4xl mx-auto p-6">
       <Flex justifyContent="space-between" alignItems="center">
-        <Link href="/" view="secondary">
-          ← Back to Sections
-        </Link>
+      <Link href="/" className="back-button mb-2">
+  <span className="arrow">←</span>
+  Back to Sections
+</Link>
         <Flex gap={4}>
           <Text variant="body-2" color="secondary">
             Completed: {stats.attempted}/{stats.total}
