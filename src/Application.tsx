@@ -1,6 +1,6 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import SectionsPage from './pages/SectionsPage';
-import SectionTestsPage from './pages/SectionTestsPage';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import SectionsPage from './pages/SectionsPage'
+import SectionTestsPage from './pages/SectionTestsPage'
 
 const router = createBrowserRouter([
   {
@@ -11,10 +11,10 @@ const router = createBrowserRouter([
     path: '/sections/:sectionId',
     element: <SectionTestsPage />,
   },
-]);
+])
 
 const Application = () => {
-  return <RouterProvider router={router} />;
-};
+  return <RouterProvider router={router} />
+}
 
-export default Application;
+export default Application

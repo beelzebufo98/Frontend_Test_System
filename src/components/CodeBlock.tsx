@@ -1,8 +1,8 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 interface CodeBlockProps {
-  code: string;
+  code: string
 }
 
 const CodeBlock = ({ code }: CodeBlockProps) => {
@@ -10,16 +10,16 @@ const CodeBlock = ({ code }: CodeBlockProps) => {
     <SyntaxHighlighter
       language="csharp"
       style={vscDarkPlus}
-      className="rounded-lg my-4"
       customStyle={{
-        padding: '1.5rem',
+        margin: 0,
+        padding: '1rem',
         fontSize: '1rem',
-        backgroundColor: '#1E1E1E'
+        backgroundColor: '#1E1E1E',
       }}
     >
       {code}
     </SyntaxHighlighter>
-  );
-};
+  )
+}
 
-export default CodeBlock;
+export default CodeBlock
